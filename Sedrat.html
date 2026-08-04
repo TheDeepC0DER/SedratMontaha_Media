@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>رسانه سدره‌المنتهی</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: b nazanin;
+}
+
+@font-face {
+    font-family: Nazanin;
+    src: url(https://fonts2u.com/download/b-nazanin.font);
+}
+  
+html{
+    scroll-behavior: smooth;
+}
+  
+:root {
+    --color-bg: rgb(255, 255, 255);
+    --color-brand: rgb(185, 168, 121);
+    --color-brand-alpha: rgba(0, 0, 0, 0.02);
+    --color-text: rgb(0, 0, 0);
+}
+
+/* #b9a879 */
+
+body {
+    padding: 8px;
+    padding-bottom: 0;
+}
+
+.menu {
+    background-color: var(--color-brand);
+    border-radius: 42px;
+    width: calc(65%);
+    margin: auto;
+    top: 8px;
+    padding: 20px 0;
+    gap: 32px;
+    position: sticky;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu a {
+    border-radius: 8px;
+    color: var(--color-bg);
+    font-size: 24px;
+    text-decoration: none;
+    padding: 0 8px;
+    transition: 0.25s;
+}
+.menu a:hover {
+    transform: translateY(0);
+    background-color: var(--color-bg);
+    color: var(--color-brand);
+}
+
+.content {
+    width: 65%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content .content-header {
+    padding: 80px 0;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content .content-header h1 {
+    color: var(--color-brand);
+    font-size: 48px;
+}
+.content .content-header h2 {
+    font-size: 28px;
+}
+.content .products-list {
+    width: calc(100% - 16px);
+    margin-bottom: 16px;
+    padding: 8px;
+    gap: 10px;
+    overflow-x: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.content .products-list::-webkit-scrollbar {
+    height: 0.5vh;
+}
+.content .products-list::-webkit-scrollbar-thumb {
+    background-color: var(--color-brand);
+    cursor: pointer;
+}
+.content .products-list .item {
+    background-color: var(--color-brand-alpha);
+    min-width: 300px;
+    width: 300px;
+    min-height: 128px;
+    max-height: fit-content;
+    padding: 8px;
+    transition: 0.25s;
+}
+.content .products-list .item:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 1px 1px 0 2px var(--color-brand);
+}
+.content .products-list .item h1 {
+    color: var(--color-brand);
+}
+.content .products-list .item p {
+    font-size: 20px;
+    line-height: 25px;
+    display: inline;
+}
+.content .products-list .item a {
+    color: var(--color-brand);
+    font-size: 22px;
+    line-height: 25px;
+    display: inline;
+}
+
+.content .about-us h1 {
+    width: 100%;
+    text-align: center;
+    color: var(--color-brand);
+}
+.content .about-us div {
+    text-align: justify;
+    font-size: 24px;
+    width: 100%;
+    margin: auto;
+}
+.content .about-us div p {
+    display: inline;
+}
+.content .about-us div h3 {
+    font-size: 24px;
+    display: inline;
+}
+
+.content .about-us .sotial {
+    margin-top: 16px;
+}
+.content .about-us div a {
+    border-radius: 24px;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+.content .about-us div .rubika {
+    background-color: purple;
+}
+.content .about-us div .eitaa {
+    background-color: orangered;
+}
+
+.see-content {
+    background-color: var(--color-brand-alpha);
+    width: calc(100% - 16px);
+    padding: 8px;
+    transition: 0.25s;
+}
+.see-content:hover {
+    box-shadow: 0px 0px 0 2px var(--color-brand);
+}
+.see-content .view-content {
+    font-size: 24px;
+    line-height: 40px;
+}
+.see-content .view-content * {
+    font-size: 24px;
+    display: inline;
+}
+
+.see-content .view-content .bold {
+    font-weight: bold;
+}
+.see-content .view-content .tell {
+    background-color: var(--color-brand-alpha);
+    border: 2px solid var(--color-brand);
+    border: 8px;
+    padding-right: 4px;
+    display: block;
+}
+.see-content .view-content div {
+    display: block;
+}
+.see-content .view-content .italic {
+    font-style: italic;
+}
+
+
+footer {
+    background-color: var(--color-text);
+    border-top: 6px solid var(--color-brand);
+    border-radius: 32px 32px 0 0;
+    width: 100%;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer * {
+    color: var(--color-bg);
+}
+footer h1, footer h2 {
+    color: var(--color-brand);
+    text-align: center;
+}
+footer .links {
+    width: calc(100% - 16px);
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+}
+footer .links .divs {
+    width: 25%;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+footer .links .divs a {
+    text-decoration: none;
+}
+footer header {
+    background-color: var(--color-brand);
+    color: var(--color-text);
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+@media screen and (max-width: 768px) {
+
+    html, body, content {
+        overflow-x: hidden;
+    }
+
+
+    body {
+        padding: 4px;
+        padding-bottom: 0;
+    }
+
+    .menu {
+        width: 100%;
+        border-radius: 20px;
+        padding: 15px 0;
+        gap: 12px;
+        flex-wrap: wrap;
+        position: static;
+    }
+
+    .menu a {
+        font-size: 16px;
+        padding: 0;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    /* هدر */
+    .content .content-header {
+        padding: 0px 0px;
+        text-align: center;
+    }
+
+    .content .content-header h1 {
+        font-size: 32px;
+    }
+
+    .content .content-header h2 {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .content .content-header h3 {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    /* تیترها */
+    .content>h1,
+    .about-us h1 {
+        font-size: 28px;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /* کارت‌ها */
+    .content .products-list {
+        width: 100%;
+        padding: 5px;
+        gap: 8px;
+    }
+
+    .content .products-list .item {
+        min-width: 250px;
+        width: 250px;
+    }
+
+    .content .products-list .item h1 {
+        font-size: 22px;
+    }
+
+    .content .products-list .item p {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+    .content .products-list .item a {
+        display: block;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .content .about-us div {
+        width: 95%;
+        font-size: 18px;
+        line-height: 2;
+    }
+
+    .content .about-us div h3 {
+        font-size: 20px;
+    }
+
+    .content .about-us .sotial {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content .about-us a {
+        display: block;
+        text-align: center;
+    }
+    .see-content {
+        width: calc(100% - 32px);
+    }
+
+    footer {
+        width: calc(100% + 8px);
+    }
+    footer .links {
+        flex-wrap: wrap;
+    }
+    footer .links .divs {
+        width: 49%;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+    <menu class="menu">
+        <a href="#home">خانه</a>
+        <a href="#text-prod">مطالب</a>
+        <a href="#products">تولیدات</a>
+        <a href="#revayat-ha">روایت‌ها</a>
+        <a href="#about">درباره ما</a>
+    </menu>
+    <div id="home" class="content">
+        <header class="content-header">
+            <h1>به رسانه سدره‌المنتهی خوش آمدید</h1>
+            <h2>وَمَا أَنْزَلْنَا عَلَیْکَ الْکِتَابَ إِلَّا لِتُبَیِّنَ لَهُمُ الَّذِی اخْتَلَفُوا فِیهِ وَهُدًی
+                وَرَحْمَةً لِقَوْمٍ یُؤْمِنُونَ</h2>
+            <h3>اگر قرار باشد اختلاف زدایی و جدایی‌ها را حذف کنیم تا به پیوند و ارتباط برسیم، نیازمند جهاد تبیین هستیم.
+                (۶۴ نحل)</h3>
+        </header>
+        <h1 class="list-header" id="text-prod">مطالب (شبهات)</h1>
+        <div class="text-products products-list">
+        </div>
+        <h1 class="list-header" id="products">تولیدات</h1>
+        <div class="products-list">
+        </div>
+
+        <h1 class="list-header" id="revayat-ha">روایت‌ها</h1>
+        <div class="products-list">
+        </div>
+
+        <div class="see-content">
+            <h1 class="content-title"></h1>
+            <div class="view-content"></div>
+        </div>
+
+        <div id="about" class="about-us">
+            <h1>درباره ما</h1>
+            <div>
+                <p>
+                امروز که اینترنت کل دنیا را در بر گرفته و دشمنان هم از رسانه و اینترنت برای تبلیغ خود
+                و تحمیل نظرات خود به مردم کشورهای مختلف استفاده می‌کنند، بعد میدان جنگ میدان رسانه‌ است که فاتح جنگ را
+                مشخص میکند.
+                در جنگ رسانه‌ای دشمن سعی می‌کند با استفاده از شایعات و شبهات و دروغ ها اراده یک ملت را سست کند و همچنین
+                میان مردم یک کشور اختلاف ایجاد کند.
+                رسانه سدرةالمنتهي سعی می‌کند با استفاده از استدلال منطقی، دلایل محکم و منابع معتبر، و محتوا های
+                چندرسانه‌ای از جمله پوستر و اینفوگرافی، پادکست و ویدیو های کوتاه و بلند به شایعات و شبهات مختلف پاسخ
+                بدهد.
+                </p>
+                <h3>اما باز هم در آخر شما هستید که انتخاب می‌‌کنید.</h3>
+            </div>
+            <div class="sotial">
+                <a id="sotial" class="rubika" href="https://rubika.ir/SadratMontaha_Media">ما را در روبیکا دنبال کنید.</a>
+                <a class="eitaa" href="">ما را در ایتا دنبال کنید.</a>
+            </div>
+        </div>
+
+        <footer>
+            <h1>رسانه سدره‌المنتهی</h1>
+            <div class="links">
+                <div class="divs">
+                    <h2>ارتباط با ما</h2>
+                    <a href="">پاسخدهی به شبهات</a>
+                    <a href="">لینک ارتباط ناشناس</a>
+                    <a href="">پیشنهادات و انتقادات</a>
+                    <a href="">همکاری با ما</a>
+                </div>
+                <div class="divs">
+                    <h2>محتوا</h2>
+                    <a href="">مطالب و شبهات</a>
+                    <a href="">تولیدات</a>
+                    <a href="">روایت‌ها</a>
+                </div>
+                <div class="divs">
+                    <h2>استفاده از محتوای رسانه</h2>
+                    <a href="">حق‌نشر مطالب</a>
+                    <a href="">حق‌نشر تولیدات چندرسانه‌ای</a>
+                    <a href="">حق‌نشر وب‌سایت</a>
+                    <a href="">Github</a>
+                </div>
+                <div class="divs">
+                    <h2>فضای مجازی</h2>
+                    <div>
+                        <a href="">E</a>
+                        <a href="">R</a>
+                        <a href="">B</a>
+                    </div>
+                </div>
+            </div>
+            <header>
+                تحت حق‌نشر MIT
+            </header>
+        </footer>
+    </div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    let allData = {};
+    fetch('contents.json')
+        .then(response => response.json())
+        .then(data => {
+            allData = data;
+
+            const textList = document.querySelector('.text-products.products-list');
+            data['text-contents'].forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'item';
+                div.innerHTML = `
+                    <h1>${item.title}</h1>
+                    <p>${item.description}</p>
+                    <a href="#" class="read-more text-item">ادامه مطلب</a>
+                `;
+
+                const link = div.querySelector('.read-more');
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showContent(item);
+                });
+
+                textList.appendChild(div);
+            });
+
+            const productsList = document.querySelector('#products + .products-list');
+            data.products.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'item';
+                div.innerHTML = `
+                    <h1>${item.title}</h1>
+                    <p>${item.description}</p>
+                    <a href="#" class="read-more">ادامه مطلب</a>
+                `;
+                productsList.appendChild(div);
+            });
+
+            const revayatList = document.querySelector('#revayat-ha + .products-list');
+            data['revayat-ha'].forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'item';
+                div.innerHTML = `
+                    <h1>${item.title}</h1>
+                    <p>${item.description}</p>
+                    <a href="${item.link}" class="read-more" target="_blank">ادامه مطلب</a>
+                `;
+                revayatList.appendChild(div);
+            });
+
+        })
+        .catch(error => console.error('خطا در لود کردن JSON:', error));
+
+    function showContent(item) {
+        const seeContent = document.querySelector('.see-content');
+        const contentTitle = seeContent.querySelector('.content-title');
+        const viewContent = seeContent.querySelector('.view-content');
+
+        if (contentTitle && viewContent) {
+            contentTitle.textContent = item.title;
+            viewContent.innerHTML = item.innerHTML || '<p>محتوای این مطلب هنوز آماده نشده است.</p>';
+        }
+
+        seeContent.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+});
+
+</script>
+
+</body>
+
+</html>
