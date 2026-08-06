@@ -23,10 +23,14 @@
 html{
     scroll-behavior: smooth;
 }
+
+.list-header {
+    scroll-margin-top: 100px;
+}
   
 :root {
     --color-bg: rgb(255, 255, 255);
-    --color-brand: rgb(185, 168, 121);
+    --color-brand: #b9a879;
     --color-brand-alpha: rgba(0, 0, 0, 0.02);
     --color-text: rgb(0, 0, 0);
 }
@@ -166,6 +170,9 @@ body {
 }
 .content .about-us div .eitaa {
     background-color: orangered;
+}
+.content .about-us div .ble {
+    background-color: rgb(0, 255, 180);
 }
 
 .see-content {
@@ -421,7 +428,8 @@ footer header {
             </div>
             <div class="sotial">
                 <a id="sotial" class="rubika" href="https://rubika.ir/SadratMontaha_Media">ما را در روبیکا دنبال کنید.</a>
-                <a class="eitaa" href="">ما را در ایتا دنبال کنید.</a>
+                <a class="eitaa" href="https://eitaa.com/SedratMontaha_Media">ما را در ایتا دنبال کنید.</a>
+                <a class="ble" href="https://ble.ir/SedratMontaha_Media">ما را در بله دنبال کنید.</a>
             </div>
         </div>
 
@@ -443,17 +451,17 @@ footer header {
                 </div>
                 <div class="divs">
                     <h2>استفاده از محتوای رسانه</h2>
-                    <a href="">حق‌نشر مطالب</a>
-                    <a href="">حق‌نشر تولیدات چندرسانه‌ای</a>
-                    <a href="">حق‌نشر وب‌سایت</a>
-                    <a href="">Github</a>
+                    <a href="">حق‌نشر مطالب (خالی)</a>
+                    <a href="">حق‌نشر تولیدات چندرسانه‌ای (خالی)</a>
+                    <a href="">حق‌نشر وب‌سایت (خالی)</a>
+                    <a href="https://github.com/TheDeepC0DER/SedratMontaha_Media">Github</a>
                 </div>
                 <div class="divs">
                     <h2>فضای مجازی</h2>
                     <div>
-                        <a href="">E</a>
-                        <a href="">R</a>
-                        <a href="">B</a>
+                        <a href="https://eitaa.com/SedratMontaha_Media">ایتا</a>‌    ‌
+                        <a href="https://rubika.ir/SedratMontaha_Media">روبیکا</a>‌    ‌
+                        <a href="https://ble.ir/SedratMontaha_Media">بله</a>
                     </div>
                 </div>
             </div>
@@ -498,8 +506,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 div.innerHTML = `
                     <h1>${item.title}</h1>
                     <p>${item.description}</p>
-                    <a href="#" class="read-more">ادامه مطلب</a>
+                    <a href="#" class="read-more">مشاهده ویدیو</a>
                 `;
+                div.querySelector(".read-more").addEventListener("click", function(e) {
+                    e.preventDefault();
+                    showVideo(item);
+                });
                 productsList.appendChild(div);
             });
 
@@ -528,6 +540,24 @@ document.addEventListener('DOMContentLoaded', () => {
             viewContent.innerHTML = item.innerHTML || '<p>محتوای این مطلب هنوز آماده نشده است.</p>';
         }
 
+        seeContent.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+
+    function showVideo(item) {
+        const seeContent = document.querySelector('.see-content');
+        const contentTitle = seeContent.querySelector('.content-title');
+        const viewContent = seeContent.querySelector('.view-content');
+        contentTitle.textContent = item.title;
+        viewContent.innerHTML = `
+            <video controls style="width:100%;">
+                <source src="${item.productFilePath}" type="video/mp4">
+                مرورگر شما از ویدیو پشتیبانی نمی‌کند.
+            </video>
+            <p>${item.description}</p>
+        `;
         seeContent.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
