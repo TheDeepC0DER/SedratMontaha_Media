@@ -552,10 +552,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const viewContent = seeContent.querySelector('.view-content');
         contentTitle.textContent = item.title;
         viewContent.innerHTML = `
-            <video controls style="width:100%;">
-                <source src="${item.productFilePath}" type="video/mp4">
-                مرورگر شما از ویدیو پشتیبانی نمی‌کند.
-            </video>
+            <iframe
+                src="${item.productFilePath}"
+                width="100%"
+                height="600"
+                frameborder="0"
+                style="border: none;">
+            </iframe>
             <p>${item.description}</p>
         `;
         seeContent.scrollIntoView({
