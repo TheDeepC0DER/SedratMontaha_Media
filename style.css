@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: b nazanin;
+}
+
+@font-face {
+    font-family: Nazanin;
+    src: url(https://fonts2u.com/download/b-nazanin.font);
+}
+  
+html{
+    scroll-behavior: smooth;
+}
+
+.list-header {
+    scroll-margin-top: 100px;
+}
+  
+:root {
+    --color-bg: rgb(255, 255, 255);
+    --color-brand: #b9a879;
+    --color-brand-alpha: rgba(0, 0, 0, 0.02);
+    --color-text: rgb(0, 0, 0);
+}
+
+/* #b9a879 */
+
+body {
+    padding: 8px;
+    padding-bottom: 0;
+}
+
+.menu {
+    background-color: var(--color-brand);
+    border-radius: 42px;
+    width: calc(65%);
+    margin: auto;
+    top: 8px;
+    padding: 20px 0;
+    gap: 32px;
+    position: sticky;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu a {
+    border-radius: 8px;
+    color: var(--color-bg);
+    font-size: 24px;
+    text-decoration: none;
+    padding: 0 8px;
+    transition: 0.25s;
+}
+.menu a:hover {
+    transform: translateY(0);
+    background-color: var(--color-bg);
+    color: var(--color-brand);
+}
+
+.content {
+    width: 65%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content .content-header {
+    padding: 80px 0;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content .content-header h1 {
+    color: var(--color-brand);
+    font-size: 48px;
+}
+.content .content-header h2 {
+    font-size: 28px;
+}
+.content .products-list {
+    width: calc(100% - 16px);
+    margin-bottom: 16px;
+    padding: 8px;
+    gap: 10px;
+    overflow-x: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.content .products-list::-webkit-scrollbar {
+    height: 0.5vh;
+}
+.content .products-list::-webkit-scrollbar-thumb {
+    background-color: var(--color-brand);
+    cursor: pointer;
+}
+.content .products-list .item {
+    background-color: var(--color-brand-alpha);
+    min-width: 300px;
+    width: 300px;
+    min-height: 128px;
+    max-height: fit-content;
+    padding: 8px;
+    transition: 0.25s;
+}
+.content .products-list .item:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 1px 1px 0 2px var(--color-brand);
+}
+.content .products-list .item h1 {
+    color: var(--color-brand);
+}
+.content .products-list .item p {
+    font-size: 20px;
+    line-height: 25px;
+    display: inline;
+}
+.content .products-list .item a {
+    color: var(--color-brand);
+    font-size: 22px;
+    line-height: 25px;
+    display: inline;
+}
+
+.content .about-us h1 {
+    width: 100%;
+    text-align: center;
+    color: var(--color-brand);
+}
+.content .about-us div {
+    text-align: justify;
+    font-size: 24px;
+    width: 100%;
+    margin: auto;
+}
+.content .about-us div p {
+    display: inline;
+}
+.content .about-us div h3 {
+    font-size: 24px;
+    display: inline;
+}
+
+.content .about-us .sotial {
+    margin-top: 16px;
+}
+.content .about-us div a {
+    border-radius: 24px;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+.content .about-us div .rubika {
+    background-color: purple;
+}
+.content .about-us div .eitaa {
+    background-color: orangered;
+}
+.content .about-us div .ble {
+    background-color: rgb(0, 255, 180);
+}
+
+.see-content {
+    background-color: var(--color-brand-alpha);
+    width: calc(100% - 16px);
+    padding: 8px;
+    transition: 0.25s;
+}
+.see-content:hover {
+    box-shadow: 0px 0px 0 2px var(--color-brand);
+}
+.see-content .view-content {
+    font-size: 24px;
+    line-height: 40px;
+}
+.see-content .view-content * {
+    font-size: 24px;
+    display: inline;
+}
+
+.see-content .view-content .bold {
+    font-weight: bold;
+}
+.see-content .view-content .tell {
+    background-color: var(--color-brand-alpha);
+    border: 2px solid var(--color-brand);
+    border: 8px;
+    padding-right: 4px;
+    display: block;
+}
+.see-content .view-content div {
+    display: block;
+}
+.see-content .view-content .italic {
+    font-style: italic;
+}
+
+
+footer {
+    background-color: var(--color-text);
+    border-top: 6px solid var(--color-brand);
+    border-radius: 32px 32px 0 0;
+    width: 100%;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer * {
+    color: var(--color-bg);
+}
+footer h1, footer h2 {
+    color: var(--color-brand);
+    text-align: center;
+}
+footer .links {
+    width: calc(100% - 16px);
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+}
+footer .links .divs {
+    width: 25%;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+footer .links .divs a {
+    text-decoration: none;
+}
+footer header {
+    background-color: var(--color-brand);
+    color: var(--color-text);
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.search-box {
+    width: 100%;
+    gap: 8px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid var(--color-brand);
+    border-radius: 12px;
+    outline: none;
+    font-family: inherit;
+    font-size: 20px;
+}
+
+.search-box button {
+    background-color: var(--color-brand);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 0 24px;
+    font-family: inherit;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.search-results {
+    width: 100%;
+}
+
+.search-result-item {
+    background-color: var(--color-brand-alpha);
+    border: 2px solid transparent;
+    padding: 12px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.search-result-item:hover {
+    border-color: var(--color-brand);
+    transform: translateY(-2px);
+}
+
+.search-result-item h2 {
+    color: var(--color-brand);
+    margin-bottom: 5px;
+}
+
+.search-result-item p {
+    font-size: 20px;
+}
+
+.search-result-item span {
+    color: var(--color-brand);
+    font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+
+    html, body, content {
+        overflow-x: hidden;
+    }
+
+
+    body {
+        padding: 4px;
+        padding-bottom: 0;
+    }
+
+    .menu {
+        width: 100%;
+        border-radius: 20px;
+        padding: 15px 0;
+        gap: 12px;
+        flex-wrap: wrap;
+        position: static;
+    }
+
+    .menu a {
+        font-size: 16px;
+        padding: 0;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    /* هدر */
+    .content .content-header {
+        padding: 0px 0px;
+        text-align: center;
+    }
+
+    .content .content-header h1 {
+        font-size: 32px;
+    }
+
+    .content .content-header h2 {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .content .content-header h3 {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    /* تیترها */
+    .content>h1,
+    .about-us h1 {
+        font-size: 28px;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /* کارت‌ها */
+    .content .products-list {
+        width: 100%;
+        padding: 5px;
+        gap: 8px;
+    }
+
+    .content .products-list .item {
+        min-width: 250px;
+        width: 250px;
+    }
+
+    .content .products-list .item h1 {
+        font-size: 22px;
+    }
+
+    .content .products-list .item p {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+    .content .products-list .item a {
+        display: block;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .content .about-us div {
+        width: 95%;
+        font-size: 18px;
+        line-height: 2;
+    }
+
+    .content .about-us div h3 {
+        font-size: 20px;
+    }
+
+    .content .about-us .sotial {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content .about-us a {
+        display: block;
+        text-align: center;
+    }
+    .see-content {
+        width: calc(100% - 32px);
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        padding: 10px;
+    }
+
+    footer {
+        width: calc(100% + 8px);
+    }
+    footer .links {
+        flex-wrap: wrap;
+    }
+    footer .links .divs {
+        width: 49%;
+    }
+}
