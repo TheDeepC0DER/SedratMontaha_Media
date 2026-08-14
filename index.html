@@ -6,445 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>رسانه سدره‌المنتهی</title>
-
-<style>
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: b nazanin;
-}
-
-@font-face {
-    font-family: Nazanin;
-    src: url(https://fonts2u.com/download/b-nazanin.font);
-}
-  
-html{
-    scroll-behavior: smooth;
-}
-
-.list-header {
-    scroll-margin-top: 100px;
-}
-  
-:root {
-    --color-bg: rgb(255, 255, 255);
-    --color-brand: #b9a879;
-    --color-brand-alpha: rgba(0, 0, 0, 0.02);
-    --color-text: rgb(0, 0, 0);
-}
-
-/* #b9a879 */
-
-body {
-    padding: 8px;
-    padding-bottom: 0;
-}
-
-.menu {
-    background-color: var(--color-brand);
-    border-radius: 42px;
-    width: calc(65%);
-    margin: auto;
-    top: 8px;
-    padding: 20px 0;
-    gap: 32px;
-    position: sticky;
-    z-index: 5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.menu a {
-    border-radius: 8px;
-    color: var(--color-bg);
-    font-size: 24px;
-    text-decoration: none;
-    padding: 0 8px;
-    transition: 0.25s;
-}
-.menu a:hover {
-    transform: translateY(0);
-    background-color: var(--color-bg);
-    color: var(--color-brand);
-}
-
-.content {
-    width: 65%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.content .content-header {
-    padding: 80px 0;
-    gap: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.content .content-header h1 {
-    color: var(--color-brand);
-    font-size: 48px;
-}
-.content .content-header h2 {
-    font-size: 28px;
-}
-.content .products-list {
-    width: calc(100% - 16px);
-    margin-bottom: 16px;
-    padding: 8px;
-    gap: 10px;
-    overflow-x: auto;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-.content .products-list::-webkit-scrollbar {
-    height: 0.5vh;
-}
-.content .products-list::-webkit-scrollbar-thumb {
-    background-color: var(--color-brand);
-    cursor: pointer;
-}
-.content .products-list .item {
-    background-color: var(--color-brand-alpha);
-    min-width: 300px;
-    width: 300px;
-    min-height: 128px;
-    max-height: fit-content;
-    padding: 8px;
-    transition: 0.25s;
-}
-.content .products-list .item:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 1px 1px 0 2px var(--color-brand);
-}
-.content .products-list .item h1 {
-    color: var(--color-brand);
-}
-.content .products-list .item p {
-    font-size: 20px;
-    line-height: 25px;
-    display: inline;
-}
-.content .products-list .item a {
-    color: var(--color-brand);
-    font-size: 22px;
-    line-height: 25px;
-    display: inline;
-}
-
-.content .about-us h1 {
-    width: 100%;
-    text-align: center;
-    color: var(--color-brand);
-}
-.content .about-us div {
-    text-align: justify;
-    font-size: 24px;
-    width: 100%;
-    margin: auto;
-}
-.content .about-us div p {
-    display: inline;
-}
-.content .about-us div h3 {
-    font-size: 24px;
-    display: inline;
-}
-
-.content .about-us .sotial {
-    margin-top: 16px;
-}
-.content .about-us div a {
-    border-radius: 24px;
-    color: white;
-    text-decoration: none;
-    padding: 8px 16px;
-}
-.content .about-us div .rubika {
-    background-color: purple;
-}
-.content .about-us div .eitaa {
-    background-color: orangered;
-}
-.content .about-us div .ble {
-    background-color: rgb(0, 255, 180);
-}
-
-.see-content {
-    background-color: var(--color-brand-alpha);
-    width: calc(100% - 16px);
-    padding: 8px;
-    transition: 0.25s;
-}
-.see-content:hover {
-    box-shadow: 0px 0px 0 2px var(--color-brand);
-}
-.see-content .view-content {
-    font-size: 24px;
-    line-height: 40px;
-}
-.see-content .view-content * {
-    font-size: 24px;
-    display: inline;
-}
-
-.see-content .view-content .bold {
-    font-weight: bold;
-}
-.see-content .view-content .tell {
-    background-color: var(--color-brand-alpha);
-    border: 2px solid var(--color-brand);
-    border: 8px;
-    padding-right: 4px;
-    display: block;
-}
-.see-content .view-content div {
-    display: block;
-}
-.see-content .view-content .italic {
-    font-style: italic;
-}
-
-
-footer {
-    background-color: var(--color-text);
-    border-top: 6px solid var(--color-brand);
-    border-radius: 32px 32px 0 0;
-    width: 100%;
-    margin-top: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-footer * {
-    color: var(--color-bg);
-}
-footer h1, footer h2 {
-    color: var(--color-brand);
-    text-align: center;
-}
-footer .links {
-    width: calc(100% - 16px);
-    margin: auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: start;
-}
-footer .links .divs {
-    width: 25%;
-    gap: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-}
-footer .links .divs a {
-    text-decoration: none;
-}
-footer header {
-    background-color: var(--color-brand);
-    color: var(--color-text);
-    text-align: center;
-    font-size: 18px;
-    width: 100%;
-    margin-top: 16px;
-}
-
-.search-box {
-    width: 100%;
-    gap: 8px;
-    margin-bottom: 20px;
-    display: flex;
-}
-
-.search-box input {
-    flex: 1;
-    padding: 12px;
-    border: 2px solid var(--color-brand);
-    border-radius: 12px;
-    outline: none;
-    font-family: inherit;
-    font-size: 20px;
-}
-
-.search-box button {
-    background-color: var(--color-brand);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    padding: 0 24px;
-    font-family: inherit;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.search-results {
-    width: 100%;
-}
-
-.search-result-item {
-    background-color: var(--color-brand-alpha);
-    border: 2px solid transparent;
-    padding: 12px;
-    margin: 10px 0;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.search-result-item:hover {
-    border-color: var(--color-brand);
-    transform: translateY(-2px);
-}
-
-.search-result-item h2 {
-    color: var(--color-brand);
-    margin-bottom: 5px;
-}
-
-.search-result-item p {
-    font-size: 20px;
-}
-
-.search-result-item span {
-    color: var(--color-brand);
-    font-size: 18px;
-}
-
-@media screen and (max-width: 768px) {
-
-    html, body, content {
-        overflow-x: hidden;
-    }
-
-
-    body {
-        padding: 4px;
-        padding-bottom: 0;
-    }
-
-    .menu {
-        width: 100%;
-        border-radius: 20px;
-        padding: 15px 0;
-        gap: 12px;
-        flex-wrap: wrap;
-        position: static;
-    }
-
-    .menu a {
-        font-size: 16px;
-        padding: 0;
-    }
-
-    .content {
-        width: 100%;
-    }
-
-    /* هدر */
-    .content .content-header {
-        padding: 0px 0px;
-        text-align: center;
-    }
-
-    .content .content-header h1 {
-        font-size: 32px;
-    }
-
-    .content .content-header h2 {
-        font-size: 18px;
-        line-height: 1.8;
-    }
-
-    .content .content-header h3 {
-        font-size: 16px;
-        line-height: 1.8;
-    }
-
-    /* تیترها */
-    .content>h1,
-    .about-us h1 {
-        font-size: 28px;
-        text-align: center;
-        margin: 10px 0;
-    }
-
-    /* کارت‌ها */
-    .content .products-list {
-        width: 100%;
-        padding: 5px;
-        gap: 8px;
-    }
-
-    .content .products-list .item {
-        min-width: 250px;
-        width: 250px;
-    }
-
-    .content .products-list .item h1 {
-        font-size: 22px;
-    }
-
-    .content .products-list .item p {
-        font-size: 17px;
-        line-height: 1.8;
-    }
-
-    .content .products-list .item a {
-        display: block;
-        margin-top: 10px;
-        font-size: 18px;
-    }
-
-    .content .about-us div {
-        width: 95%;
-        font-size: 18px;
-        line-height: 2;
-    }
-
-    .content .about-us div h3 {
-        font-size: 20px;
-    }
-
-    .content .about-us .sotial {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .content .about-us a {
-        display: block;
-        text-align: center;
-    }
-    .see-content {
-        width: calc(100% - 32px);
-    }
-
-    .search-box {
-        flex-direction: column;
-    }
-
-    .search-box button {
-        padding: 10px;
-    }
-
-    footer {
-        width: calc(100% + 8px);
-    }
-    footer .links {
-        flex-wrap: wrap;
-    }
-    footer .links .divs {
-        width: 49%;
-    }
-}
-
-</style>
-
 </head>
 
 <body>
@@ -476,7 +37,7 @@ footer header {
         </div>
 
         <div class="see-content">
-            <h1 class="content-title"></h1>
+            <h1 class="content-title">جستجو</h1>
             <div class="search-box" style="display: none;">
                 <input
                     type="text"
@@ -488,9 +49,7 @@ footer header {
                 </button>
             </div>
             <div class="search-results"></div>
-            <div class="view-content"></div>
         </div>
-
         <div id="about" class="about-us">
             <h1>درباره ما</h1>
             <div>
@@ -542,7 +101,6 @@ footer header {
                         <a href="https://eitaa.com/SedratMontaha_Media">ایتا</a>‌    ‌
                         <a href="https://rubika.ir/SedratMontaha_Media">روبیکا</a>‌    ‌
                         <a href="https://ble.ir/SedratMontaha_Media">بله</a>
-                        <a href="https://splus.ir/SedratMontaha_Media">سروش+</a>
                     </div>
                 </div>
             </div>
@@ -553,267 +111,552 @@ footer header {
     </div>
 
 <script>
-
 document.addEventListener('DOMContentLoaded', () => {
+
     let allData = {};
+
+    const searchButton = document.querySelector('#search-button');
+    const searchBox = document.querySelector('.search-box');
+    const searchInput = document.querySelector('#search-input');
+    const searchSubmit = document.querySelector('#search-submit');
+    const searchResults = document.querySelector('.search-results');
+    const seeContent = document.querySelector('.see-content');
+    const contentTitle = document.querySelector('.content-title');
+
+
+    // =========================
+    // Load JSON
+    // =========================
+
     fetch('contents.json')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('خطا در دریافت contents.json');
+            }
+
+            return response.json();
+        })
         .then(data => {
+
             allData = data;
 
-            const textList = document.querySelector('.text-products.products-list');
-            data['text-contents'].forEach(item => {
-                const div = document.createElement('div');
-                div.className = 'item';
-                div.innerHTML = `
-                    <h1>${item.title}</h1>
-                    <p>${item.description}</p>
-                    <a href="#" class="read-more text-item">ادامه مطلب</a>
-                `;
-
-                const link = div.querySelector('.read-more');
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    showContent(item);
-                });
-
-                textList.appendChild(div);
-            });
-
-            const productsList = document.querySelector('#products + .products-list');
-            data.products.forEach(item => {
-                const div = document.createElement('div');
-                div.className = 'item';
-                div.innerHTML = `
-                    <h1>${item.title}</h1>
-                    <p>${item.description}</p>
-                    <a href="#" class="read-more">مشاهده ویدیو</a>
-                `;
-                div.querySelector(".read-more").addEventListener("click", function(e) {
-                    e.preventDefault();
-                    showVideo(item);
-                });
-                productsList.appendChild(div);
-            });
-
-            const revayatList = document.querySelector('#revayat-ha + .products-list');
-            data['revayat-ha'].forEach(item => {
-                const div = document.createElement('div');
-                div.className = 'item';
-                div.innerHTML = `
-                    <h1>${item.title}</h1>
-                    <p>${item.description}</p>
-                    <a href="${item.link}" class="read-more" target="_blank">ادامه مطلب</a>
-                `;
-                revayatList.appendChild(div);
-            });
+            loadTextContents(data);
+            loadProducts(data);
+            loadRevayatHa(data);
 
         })
-        .catch(error => console.error('خطا در لود کردن JSON:', error));
+        .catch(error => {
+            console.error('خطا در لود کردن JSON:', error);
+        });
 
-    function showContent(item) {
-        const seeContent = document.querySelector('.see-content');
-        const contentTitle = seeContent.querySelector('.content-title');
-        const viewContent = seeContent.querySelector('.view-content');
 
-        searchBox.style.display = 'none';
-        searchResults.innerHTML = '';
+    // =========================
+    // Load Text Contents
+    // =========================
 
-        if (contentTitle && viewContent) {
-            contentTitle.textContent = item.title;
-            viewContent.innerHTML = item.innerHTML || '<p>محتوای این مطلب هنوز آماده نشده است.</p>';
+    function loadTextContents(data) {
+
+        const textList =
+            document.querySelector('.text-products.products-list');
+
+        if (!textList || !data['text-contents']) {
+            return;
         }
 
-        seeContent.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+        data['text-contents'].forEach(item => {
+
+            const div = document.createElement('div');
+
+            div.className = 'item';
+
+            div.innerHTML = `
+                <h1>${escapeHTML(item.title)}</h1>
+
+                <p>${escapeHTML(item.description || '')}</p>
+
+                <a
+                    href="${escapeAttribute(item.url || '#')}"
+                    class="read-more text-item"
+                >
+                    ادامه مطلب
+                </a>
+            `;
+
+            textList.appendChild(div);
         });
     }
 
-    function showVideo(item) {
-        const seeContent = document.querySelector('.see-content');
-        const contentTitle = seeContent.querySelector('.content-title');
-        const viewContent = seeContent.querySelector('.view-content');
 
-        searchBox.style.display = 'none';
+    // =========================
+    // Load Products
+    // =========================
+
+    function loadProducts(data) {
+
+        const productsList =
+            document.querySelector('#products + .products-list');
+
+        if (!productsList || !data.products) {
+            return;
+        }
+
+        data.products.forEach(item => {
+
+            const div = document.createElement('div');
+
+            div.className = 'item';
+
+            div.innerHTML = `
+                <h1>${escapeHTML(item.title)}</h1>
+
+                <p>${escapeHTML(item.description || '')}</p>
+
+                <a
+                    href="#"
+                    class="read-more"
+                    data-product="true"
+                >
+                    مشاهده ویدیو
+                </a>
+            `;
+
+            const link = div.querySelector('.read-more');
+
+            link.addEventListener('click', function(e) {
+
+                e.preventDefault();
+
+                showVideo(item);
+
+            });
+
+            productsList.appendChild(div);
+        });
+    }
+
+
+    // =========================
+    // Load Revayat Ha
+    // =========================
+
+    function loadRevayatHa(data) {
+
+        const revayatList =
+            document.querySelector('#revayat-ha + .products-list');
+
+        if (!revayatList || !data['revayat-ha']) {
+            return;
+        }
+
+        data['revayat-ha'].forEach(item => {
+
+            const div = document.createElement('div');
+
+            div.className = 'item';
+
+            div.innerHTML = `
+                <h1>${escapeHTML(item.title)}</h1>
+
+                <p>${escapeHTML(item.description || '')}</p>
+
+                <a
+                    href="${escapeAttribute(item.link || '#')}"
+                    class="read-more"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    ادامه مطلب
+                </a>
+            `;
+
+            revayatList.appendChild(div);
+        });
+    }
+
+
+    // =========================
+    // Search Button
+    // =========================
+
+    searchButton.addEventListener('click', function(e) {
+
+        e.preventDefault();
+
+        searchBox.style.display = 'flex';
+
         searchResults.innerHTML = '';
 
-        contentTitle.textContent = item.title;
-        viewContent.innerHTML = `
-            <iframe
-                src="${item.productFilePath}"
-                width="100%"
-                frameborder="0"
-                style="border: none;">
-            </iframe>
-            <p>${item.description}</p>
-        `;
+        contentTitle.textContent = 'جستجو';
+
         seeContent.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });
-    }
 
-const searchButton = document.querySelector('#search-button');
-const searchBox = document.querySelector('.search-box');
-const searchInput = document.querySelector('#search-input');
-const searchSubmit = document.querySelector('#search-submit');
-const searchResults = document.querySelector('.search-results');
+        setTimeout(() => {
+            searchInput.focus();
+        }, 500);
 
-searchButton.addEventListener('click', function(e) {
-    e.preventDefault();
-
-    const seeContent = document.querySelector('.see-content');
-
-    searchBox.style.display = 'flex';
-
-    searchResults.innerHTML = '';
-
-    document.querySelector('.content-title').textContent = 'جستجو';
-
-    document.querySelector('.view-content').innerHTML = '';
-
-    seeContent.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
     });
 
-    setTimeout(() => {
-        searchInput.focus();
-    }, 500);
-});
-searchSubmit.addEventListener('click', function() {
-    performSearch();
-});
-searchInput.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') {
+
+    // =========================
+    // Search Submit
+    // =========================
+
+    searchSubmit.addEventListener('click', function() {
+
         performSearch();
-    }
-});
+
+    });
 
 
-function performSearch() {
-    const query = searchInput.value.trim().toLowerCase();
-    searchResults.innerHTML = '';
-    if (!query) {
-        searchResults.innerHTML = `
-            <p>لطفاً یک عبارت برای جستجو وارد کنید.</p>
-        `;
-        return;
-    }
+    searchInput.addEventListener('keydown', function(e) {
 
-    let results = [];
-
-    if (allData['text-contents']) {
-        allData['text-contents'].forEach(item => {
-            const title = item.title || '';
-            const description = item.description || '';
-            const innerHTML = item.innerHTML || '';
-            const textToSearch =
-                title + ' ' +
-                description + ' ' +
-                innerHTML;
-            if (textToSearch.toLowerCase().includes(query)) {
-                results.push({
-                    type: 'text',
-                    item: item
-                });
-            }
-        });
-    }
-
-    if (allData.products) {
-        allData.products.forEach(item => {
-            const title = item.title || '';
-            const description = item.description || '';
-            const textToSearch =
-                title + ' ' +
-                description;
-            if (textToSearch.toLowerCase().includes(query)) {
-                results.push({
-                    type: 'product',
-                    item: item
-                });
-            }
-        });
-    }
-
-    if (allData['revayat-ha']) {
-        allData['revayat-ha'].forEach(item => {
-            const title = item.title || '';
-            const description = item.description || '';
-            const textToSearch =
-                title + ' ' +
-                description;
-            if (textToSearch.toLowerCase().includes(query)) {
-                results.push({
-                    type: 'revayat',
-                    item: item
-                });
-            }
-        });
-    }
-
-    if (results.length === 0) {
-        searchResults.innerHTML = `
-            <p>نتیجه‌ای برای «${escapeHTML(query)}» پیدا نشد.</p>
-        `;
-        return;
-    }
-
-    const resultTitle = document.createElement('h2');
-    resultTitle.textContent =
-        `${results.length} نتیجه پیدا شد`;
-    searchResults.appendChild(resultTitle);
-    results.forEach(result => {
-        const item = result.item;
-        const resultDiv = document.createElement('div');
-        resultDiv.className = 'search-result-item';
-        let typeText = '';
-        if (result.type === 'text') {
-            typeText = 'مطالب';
+        if (e.key === 'Enter') {
+            performSearch();
         }
-        else if (result.type === 'product') {
-            typeText = 'تولیدات';
+
+    });
+
+
+    // =========================
+    // Search
+    // =========================
+
+    function performSearch() {
+
+        const query =
+            searchInput.value.trim().toLowerCase();
+
+        searchResults.innerHTML = '';
+
+
+        if (!query) {
+
+            searchResults.innerHTML = `
+                <p>
+                    لطفاً یک عبارت برای جستجو وارد کنید.
+                </p>
+            `;
+
+            return;
         }
-        else if (result.type === 'revayat') {
-            typeText = 'روایت‌ها';
+
+
+        let results = [];
+
+
+        // =========================
+        // Text Contents
+        // =========================
+
+        if (allData['text-contents']) {
+
+            allData['text-contents'].forEach(item => {
+
+                const title =
+                    item.title || '';
+
+                const description =
+                    item.description || '';
+
+
+                /*
+                 * فقط عنوان و توضیحات جستجو می‌شوند.
+                 *
+                 * innerHTML دیگر وجود ندارد
+                 * و اصلاً در جستجو استفاده نمی‌شود.
+                 */
+
+                const textToSearch =
+                    title + ' ' + description;
+
+
+                if (
+                    textToSearch
+                        .toLowerCase()
+                        .includes(query)
+                ) {
+
+                    results.push({
+                        type: 'text',
+                        item: item
+                    });
+
+                }
+
+            });
+
         }
-        resultDiv.innerHTML = `
-            <h2>${escapeHTML(item.title)}</h2>
+
+
+        // =========================
+        // Products
+        // =========================
+
+        if (allData.products) {
+
+            allData.products.forEach(item => {
+
+                const title =
+                    item.title || '';
+
+                const description =
+                    item.description || '';
+
+
+                const textToSearch =
+                    title + ' ' + description;
+
+
+                if (
+                    textToSearch
+                        .toLowerCase()
+                        .includes(query)
+                ) {
+
+                    results.push({
+                        type: 'product',
+                        item: item
+                    });
+
+                }
+
+            });
+
+        }
+
+
+        // =========================
+        // Revayat
+        // =========================
+
+        if (allData['revayat-ha']) {
+
+            allData['revayat-ha'].forEach(item => {
+
+                const title =
+                    item.title || '';
+
+                const description =
+                    item.description || '';
+
+
+                const textToSearch =
+                    title + ' ' + description;
+
+
+                if (
+                    textToSearch
+                        .toLowerCase()
+                        .includes(query)
+                ) {
+
+                    results.push({
+                        type: 'revayat',
+                        item: item
+                    });
+
+                }
+
+            });
+
+        }
+
+
+        // =========================
+        // No Results
+        // =========================
+
+        if (results.length === 0) {
+
+            searchResults.innerHTML = `
+                <p>
+                    نتیجه‌ای برای
+                    «${escapeHTML(query)}»
+                    پیدا نشد.
+                </p>
+            `;
+
+            return;
+        }
+
+
+        // =========================
+        // Result Count
+        // =========================
+
+        const resultTitle =
+            document.createElement('h2');
+
+        resultTitle.textContent =
+            `${results.length} نتیجه پیدا شد`;
+
+        searchResults.appendChild(resultTitle);
+
+
+        // =========================
+        // Results
+        // =========================
+
+        results.forEach(result => {
+
+            const item = result.item;
+
+            const resultDiv =
+                document.createElement('div');
+
+            resultDiv.className =
+                'search-result-item';
+
+
+            let typeText = '';
+
+
+            if (result.type === 'text') {
+                typeText = 'مطالب';
+            }
+
+            else if (result.type === 'product') {
+                typeText = 'تولیدات';
+            }
+
+            else if (result.type === 'revayat') {
+                typeText = 'روایت‌ها';
+            }
+
+
+            resultDiv.innerHTML = `
+                <h2>
+                    ${escapeHTML(item.title)}
+                </h2>
+
+                <p>
+                    ${escapeHTML(item.description || '')}
+                </p>
+
+                <span>
+                    ${typeText}
+                </span>
+            `;
+
+
+            resultDiv.addEventListener(
+                'click',
+                function() {
+
+                    // Article
+                    if (result.type === 'text') {
+
+                        if (item.url) {
+                            window.location.href =
+                                item.url;
+                        }
+
+                    }
+
+
+                    // Product
+                    else if (result.type === 'product') {
+
+                        showVideo(item);
+
+                    }
+
+
+                    // Revayat
+                    else if (result.type === 'revayat') {
+
+                        if (item.link) {
+
+                            window.open(
+                                item.link,
+                                '_blank',
+                                'noopener,noreferrer'
+                            );
+
+                        }
+
+                    }
+
+                }
+            );
+
+
+            searchResults.appendChild(resultDiv);
+
+        });
+
+    }
+
+
+    // =========================
+    // Show Video
+    // =========================
+
+    function showVideo(item) {
+
+        searchBox.style.display = 'none';
+
+        searchResults.innerHTML = '';
+
+        contentTitle.textContent =
+            item.title;
+
+
+        const videoContainer =
+            document.createElement('div');
+
+        videoContainer.innerHTML = `
+            <iframe
+                src="${escapeAttribute(item.productFilePath || '')}"
+                width="100%"
+                height="500"
+                frameborder="0"
+                style="border: none;"
+                allowfullscreen>
+            </iframe>
+
             <p>
                 ${escapeHTML(item.description || '')}
             </p>
-            <span>
-                ${typeText}
-            </span>
         `;
-        resultDiv.addEventListener('click', function() {
-            if (result.type === 'text') {
-                showContent(item);
-            }
-            else if (result.type === 'product') {
-                showVideo(item);
-            }
-            else if (result.type === 'revayat') {
-                if (item.link) {
-                    window.open(item.link, '_blank');
-                }
-            }
+
+
+        searchResults.appendChild(videoContainer);
+
+
+        seeContent.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
         });
-        searchResults.appendChild(resultDiv);
-    });
-}
+    }
 
+    // =========================
+    // Escape HTML
+    // =========================
 
-function escapeHTML(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-}
+    function escapeHTML(text) {
+        const div =
+            document.createElement('div');
+        div.textContent =
+            text ?? '';
+        return div.innerHTML;
+    }
 
+    // =========================
+    // Escape Attribute
+    // =========================
+    function escapeAttribute(value) {
+        return String(value ?? '')
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    }
 });
-
 </script>
 
 </body>
