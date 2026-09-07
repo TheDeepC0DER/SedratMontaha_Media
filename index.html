@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="tOd8rdt-dvrfYbErq1w2yk5UtN61JqdCq_lNAxmJgDg" />
-    
+
     <title>رسانه سدره‌المنتهی | مقالات و مطالب</title>
 
     <meta name="description"
@@ -41,15 +40,22 @@
             <h3>اگر قرار باشد اختلاف زدایی و جدایی‌ها را حذف کنیم تا به پیوند و ارتباط برسیم، نیازمند جهاد تبیین هستیم.
                 (۶۴ نحل)</h3>
         </header>
-        <h1 class="list-header" id="text-prod">مطالب (شبهات)</h1>
-        <div class="text-products products-list">
-        </div>
-        <h1 class="list-header" id="products">تولیدات</h1>
-        <div class="products-list">
-        </div>
 
-        <h1 class="list-header" id="revayat-ha">روایت‌ها</h1>
-        <div class="products-list">
+
+        <div class="contents">
+            <div class="lists-headers">
+                <h1 class="list-header" id="text-prod">مطالب (شبهات)</h1>
+                <h1 class="list-header" id="products">تولیدات</h1>
+                <h1 class="list-header" id="revayat-ha">روایت‌ها</h1>
+            </div>
+            <div class="contents-lists">
+                <div class="text-products products-list">
+                </div>
+                <div class="products-list">
+                </div>
+                <div class="products-list">
+                </div>
+            </div>
         </div>
 
         <div class="see-content">
@@ -85,7 +91,6 @@
                 <a id="sotial" class="rubika" href="https://rubika.ir/SadratMontaha_Media">ما را در روبیکا دنبال کنید.</a>
                 <a class="eitaa" href="https://eitaa.com/SedratMontaha_Media">ما را در ایتا دنبال کنید.</a>
                 <a class="ble" href="https://ble.ir/SedratMontaha_Media">ما را در بله دنبال کنید.</a>
-                <a class="splus" href="https://splus.ir/SedratMontaha_Media">ما را در سروش+ دنبال کنید.</a>
             </div>
         </div>
 
@@ -94,7 +99,9 @@
             <div class="links">
                 <div class="divs">
                     <h2>ارتباط با ما</h2>
+                    <a href="">پاسخدهی به شبهات</a>
                     <a href="">لینک ارتباط ناشناس</a>
+                    <a href="">پیشنهادات و انتقادات</a>
                     <a href="">همکاری با ما</a>
                 </div>
                 <div class="divs">
@@ -108,6 +115,7 @@
                     <a href="">حق‌نشر مطالب (خالی)</a>
                     <a href="">حق‌نشر تولیدات چندرسانه‌ای (خالی)</a>
                     <a href="">حق‌نشر وب‌سایت (خالی)</a>
+                    <a href="https://github.com/TheDeepC0DER/SedratMontaha_Media">Github</a>
                 </div>
                 <div class="divs">
                     <h2>فضای مجازی</h2>
@@ -645,31 +653,41 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth',
             block: 'start'
         });
+
     }
+
 
     // =========================
     // Escape HTML
     // =========================
 
     function escapeHTML(text) {
+
         const div =
             document.createElement('div');
+
         div.textContent =
             text ?? '';
+
         return div.innerHTML;
     }
+
 
     // =========================
     // Escape Attribute
     // =========================
+
     function escapeAttribute(value) {
+
         return String(value ?? '')
             .replace(/&/g, '&amp;')
             .replace(/"/g, '&quot;')
             .replace(/'/g, '&#39;')
             .replace(/</g, '&lt;')
             .replace(/>/g, '&gt;');
+
     }
+
 });
 </script>
 
