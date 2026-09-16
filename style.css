@@ -117,10 +117,10 @@ body {
 }
 
 .content .contents .products-list {
-    width: calc(33.33%);
+    width: calc(50%);
     height: 100%;
     padding: 0px;
-    padding-top: 8px;
+    padding-top: 4px;
     gap: 10px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -167,6 +167,11 @@ body {
     font-size: 22px;
     line-height: 25px;
     display: inline;
+}
+
+.content .contents #products-list .item h1 {
+    width: 100%;
+    text-align: center;
 }
 
 .content .about-us h1 {
