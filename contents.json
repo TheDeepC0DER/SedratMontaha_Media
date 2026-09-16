@@ -27,6 +27,16 @@
             "title": "ممنوع است.",
             "image": "assets/images/mamnoo-ast.jpg",
             "url": "/archives/Mamnoo-ast"
+        },
+        {
+            "title": "خوش دارم",
+            "image": "assets/images/khosh-daram.jpg",
+            "url": "/archives/khosh-daram"
+        },
+        {
+            "title": "این فرصت",
+            "image": "assets/images/forsat.jpg",
+            "url": "/archives/forsat"
         }
     ]
 }
