@@ -194,14 +194,14 @@ document.addEventListener('DOMContentLoaded', () => {
             div.innerHTML = `
                 <h1>${escapeHTML(item.title)}</h1>
 
-                <p>${escapeHTML(item.description || '')}</p>
-
+                <p>${escapeHTML(item.description || '')}
                 <a
                     href="${escapeAttribute(item.url || '#')}"
                     class="read-more text-item"
                 >
                     ادامه مطلب
                 </a>
+                </p>
             `;
 
             textList.appendChild(div);
@@ -299,6 +299,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // =========================
     // Search Button
     // =========================
+
+    searchBox.style.display = 'flex';
 
     searchButton.addEventListener('click', function(e) {
 
