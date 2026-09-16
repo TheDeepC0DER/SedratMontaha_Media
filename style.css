@@ -426,7 +426,7 @@ footer header {
     }
 
     .content .contents {
-        height: 700px;
+        height: 650px;
     }
     .content .contents .lists-headers {
         display: none;
@@ -443,8 +443,8 @@ footer header {
         min-height: 0;
         flex-direction: row;
         justify-content: start;
-        align-items: stretch;
-        overflow-x: auto;      /* مهم */
+        align-items: center;
+        overflow-x: auto;
         overflow-y: hidden;
     }
 
@@ -453,17 +453,30 @@ footer header {
     }
 
     .content .contents .products-list .item {
-        width: 300px;
-        min-width: 300px;     /* مهم */
-        height: 100%;
-        flex-shrink: 0;       /* مهم - نذاره جمع بشه */
-        height: auto;         /* بهتره auto باشه */
+        width: 220px;
+        height: 90%;
+        flex-shrink: 0;
+        /* height: auto; */
         padding: 8px;
         transition: 0.25s;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .content .contents .products-list .item:hover {
+        transform: none;
+        box-shadow: 0px 0px 0px 1px #b9a879;
+    }
+
+    .content .contents .products-list .item h1 {
+        font-size: 22px;
+    }
+
+    .content .contents .products-list .item p {
+        text-align: justify;
+        font-size: 16px;
     }
 
     .content .about-us div {
